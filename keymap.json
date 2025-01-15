@@ -1,0 +1,54 @@
+[
+  {
+    "context": "Editor || Workspace",
+    "bindings": {
+      "ctrl-p": "file_finder::Toggle",
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "shift-ctrl-g": "pane::ActivatePrevItem",
+      "shift-ctrl-c": "pane::ActivateNextItem",
+      "shift-ctrl-f": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      ", w": "workspace::Save"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    // "context": "Editor && vim_mode == insert && menu",
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor || Dock",
+    "bindings": {
+      "ctrl-g": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-c": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-n": ["terminal::SendKeystroke", "cmd-n"]
+    }
+  }
+]
