@@ -7,13 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
-  },
   "show_inline_completions": false,
   "inline_completions": {
     "disabled_globs": [
@@ -39,8 +32,8 @@
   "base_keymap": "VSCode",
   "theme": "One Dark",
   "vim_mode": true,
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "ui_font_size": 12,
+  "buffer_font_size": 12,
   "file_scan_exclusions": [
     "**/.git",
     "**/.svn",

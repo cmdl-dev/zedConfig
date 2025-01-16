@@ -3,23 +3,40 @@
     "context": "Editor || Workspace",
     "bindings": {
       "ctrl-p": "file_finder::Toggle",
-      "ctrl-t": "workspace::ToggleBottomDock",
+      "shift-ctrl-d": "workspace::ToggleBottomDock",
       "shift-ctrl-g": "pane::ActivatePrevItem",
       "shift-ctrl-c": "pane::ActivateNextItem",
-      "shift-ctrl-f": "pane::DeploySearch"
+      "shift-ctrl-f": "pane::DeploySearch",
+      //Ctrl-v is like leader but stands for vim
+
+      "ctrl-h": ["pane::ActivateItem", 0],
+      "ctrl-t": ["pane::ActivateItem", 1],
+      "ctrl-n": ["pane::ActivateItem", 2],
+      "ctrl-s": ["pane::ActivateItem", 3],
+      //??
+      "ctrl-7": "pane::SwapItemLeft",
+      "ctrl-8": "pane::SwapItemRight",
+      // "shift-ctrl-enter": "search::SelectAllMatches"
+      "ctrl-1": [
+        "task::Spawn",
+        { "task_name": "start lazygit", "reveal_target": "center" }
+      ]
     }
   },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
-      ", w": "workspace::Save"
     }
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work only in normal mode
+      ", w": "workspace::Save",
+      ", d": "diagnostics::Deploy",
+      ", n": "editor::GoToDiagnostic",
+      ", p": "editor::GoToPrevDiagnostic"
     }
   },
   {
