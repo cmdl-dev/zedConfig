@@ -33,7 +33,7 @@
   "theme": "One Dark",
   "vim_mode": true,
   "ui_font_size": 12,
-  "buffer_font_size": 12,
+  "buffer_font_size": 10,
   "file_scan_exclusions": [
     "**/.git",
     "**/.svn",

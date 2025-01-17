@@ -1,22 +1,33 @@
 [
   {
-    "context": "Editor || Workspace",
+    // If we are showing the code actions
+    "context": "(Editor || Workspace) && showing_completions",
     "bindings": {
+      "ctrl-y": ["workspace::SendKeystrokes", "enter"]
+    }
+  },
+  {
+    "context": "!showing_completions && (Editor || Workspace)",
+    "bindings": {
+      "ctrl-b ctrl-f": "editor::FoldAll",
+      "ctrl-b f": "editor::ToggleFold",
+      "ctrl-b ctrl-shift-f": "editor::UnfoldAll",
+      "ctrl-b s": "projects::OpenRecent",
       "ctrl-p": "file_finder::Toggle",
       "shift-ctrl-d": "workspace::ToggleBottomDock",
       "shift-ctrl-g": "pane::ActivatePrevItem",
       "shift-ctrl-c": "pane::ActivateNextItem",
       "shift-ctrl-f": "pane::DeploySearch",
-      //Ctrl-v is like leader but stands for vim
 
+      // Swap tabs left and right
+      "ctrl-shift-7": "pane::SwapItemLeft",
+      "ctrl-shift-8": "pane::SwapItemRight",
+      // Harpoon stuff
       "ctrl-h": ["pane::ActivateItem", 0],
       "ctrl-t": ["pane::ActivateItem", 1],
       "ctrl-n": ["pane::ActivateItem", 2],
       "ctrl-s": ["pane::ActivateItem", 3],
-      //??
-      "ctrl-7": "pane::SwapItemLeft",
-      "ctrl-8": "pane::SwapItemRight",
-      // "shift-ctrl-enter": "search::SelectAllMatches"
+      // ?? random testing
       "ctrl-1": [
         "task::Spawn",
         { "task_name": "start lazygit", "reveal_target": "center" }
