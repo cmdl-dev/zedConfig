@@ -9,10 +9,7 @@
 {
   "show_inline_completions": false,
   "inline_completions": {
-    "disabled_globs": [
-      ".env",
-      "TivityCommercialNative/app/utils/secureStorageHelper.ts"
-    ]
+    "disabled_globs": [".env" ]
   },
   "languages": {
     "TSX": {
